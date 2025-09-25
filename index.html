@@ -3,10 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jianbo Zhao • Data Analytics Portfolio</title>
-  <meta name="description" content="Data Analyst & Data Science practitioner — projects in recommendation systems, fraud risk, geospatial analytics, forecasting, and BI dashboards." />
+  <title>Jianbo Zhao • Selected Work & Projects</title>
+  <meta name="description" content="Selected work (anonymized) and open-source projects in data analytics and data science." />
   <meta name="author" content="Jianbo Zhao" />
-  <link rel="preconnect" href="https://cdn.jsdelivr.net"/>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,11 +13,10 @@
   <style>
     :root {color-scheme: light dark}
     html {scroll-behavior: smooth}
-    body {font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"}
+    body {font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans"}
     .glass {backdrop-filter: blur(10px)}
   </style>
   <script>
-    // dark mode preference
     const stored = localStorage.getItem('theme');
     if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark');
@@ -35,7 +33,8 @@
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="#home" class="font-extrabold text-xl tracking-tight">Jianbo Zhao</a>
       <nav class="hidden md:flex gap-6 text-sm font-medium">
-        <a href="#projects" class="hover:text-indigo-600">Projects</a>
+        <a href="#work" class="hover:text-indigo-600">Selected Work</a>
+        <a href="#personal-projects" class="hover:text-indigo-600">Personal Projects</a>
         <a href="#about" class="hover:text-indigo-600">About</a>
         <a href="#contact" class="hover:text-indigo-600">Contact</a>
         <a href="resume.pdf" class="hover:text-indigo-600" target="_blank" rel="noopener">Resume</a>
@@ -54,7 +53,7 @@
         <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Data Analyst & Data Science Practitioner</h1>
         <p class="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-2xl">Turning complex datasets into actionable insights across fintech, e-commerce, manufacturing, and urban planning. Skilled in SQL, Python, Tableau/Power BI, ML, recommendation systems, and geospatial analytics.</p>
         <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#projects" class="px-5 py-2.5 rounded-2xl bg-indigo-600 text-white font-semibold shadow">View Projects</a>
+          <a href="#work" class="px-5 py-2.5 rounded-2xl bg-indigo-600 text-white font-semibold shadow">View Selected Work</a>
           <a href="#contact" class="px-5 py-2.5 rounded-2xl border border-slate-300 dark:border-slate-700">Contact</a>
         </div>
         <div class="mt-6 text-sm text-slate-500 dark:text-slate-400">Toronto, ON · Open to roles in Data Analytics & Data Science</div>
@@ -77,23 +76,23 @@
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="max-w-6xl mx-auto px-4 py-12">
+  <!-- Selected Work -->
+  <section id="work" class="max-w-6xl mx-auto px-4 py-12">
     <div class="flex items-end justify-between gap-4">
-      <h2 class="text-3xl md:text-4xl font-extrabold">Projects</h2>
-      <a class="text-sm underline underline-offset-4" href="https://github.com/daveqwerty1007" target="_blank" rel="noopener">All repositories</a>
+      <h2 class="text-3xl md:text-4xl font-extrabold">Selected Work</h2>
+      <span></span>
     </div>
-    <p class="mt-3 text-slate-600 dark:text-slate-300">Each case study includes the problem, data, process, and outcomes, plus links to code and dashboards.</p>
+    <p class="mt-3 text-slate-600 dark:text-slate-300">Internships and industry engagements. Details anonymized for confidentiality; public demos use synthetic or open datasets.</p>
 
     <div class="mt-8 grid md:grid-cols-2 gap-6">
 
-      <!-- Project 1 -->
+      <!-- Work 1 -->
       <article class="group rounded-3xl border border-slate-200 dark:border-slate-800 p-6 bg-white/60 dark:bg-slate-900/60 glass shadow-sm">
         <div class="flex items-center justify-between">
           <h3 class="text-xl font-bold">Personalized Anime Recommendation Engine</h3>
-          <span class="text-xs px-2 py-1 rounded-full bg-indigo-600/10 text-indigo-700 dark:text-indigo-300 border border-indigo-600/20">ML</span>
+          <span class="text-xs px-2 py-1 rounded-full bg-slate-600/10 text-slate-700 dark:text-slate-300 border border-slate-600/20">Industry Work</span>
         </div>
-        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Hybrid CF + demographic/behavioral signals; matrix factorization + gradient-boosting ranker. A/B tests across 50k users cut mid‑season drop‑off by 20% and increased niche title discovery by 25%.</p>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Hybrid CF + behavioral signals; MF baseline + gradient‑boosting ranker. A/B across 50k users cut mid‑season drop‑off by 20% and increased niche discovery by 25%.</p>
         <div class="mt-4 flex flex-wrap gap-2 text-xs">
           <span class="px-2 py-1 rounded-lg border">Python</span>
           <span class="px-2 py-1 rounded-lg border">SQL</span>
@@ -101,74 +100,86 @@
           <span class="px-2 py-1 rounded-lg border">A/B Testing</span>
         </div>
         <div class="mt-5 flex flex-wrap gap-3">
-          <a href="#" class="text-sm underline underline-offset-4">Case study</a>
-          <a href="#" class="text-sm underline underline-offset-4">Notebook</a>
-          <a href="#" class="text-sm underline underline-offset-4">Demo</a>
+          <a href="work/anime-rec/" class="text-sm underline underline-offset-4">Engagement write-up</a>
+          <a href="work/anime-rec/notebook-public.html" class="text-sm underline underline-offset-4">Replicated notebook (public data)</a>
+          <a href="work/anime-rec/screenshots/" class="text-sm underline underline-offset-4">Dashboard screenshots (redacted)</a>
         </div>
       </article>
 
-      <!-- Project 2 -->
+      <!-- Work 2 -->
       <article class="group rounded-3xl border border-slate-200 dark:border-slate-800 p-6 bg-white/60 dark:bg-slate-900/60 glass shadow-sm">
         <div class="flex items-center justify-between">
           <h3 class="text-xl font-bold">Geospatial Route‑Finding for Walkers & Cyclists</h3>
-          <span class="text-xs px-2 py-1 rounded-full bg-emerald-600/10 text-emerald-700 dark:text-emerald-300 border border-emerald-600/20">Geospatial</span>
+          <span class="text-xs px-2 py-1 rounded-full bg-slate-600/10 text-slate-700 dark:text-slate-300 border border-slate-600/20">Industry Work</span>
         </div>
-        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Balanced path length, wait time, and comfort using Ripley’s K‑function and crowd‑sourced safety ratings; achieved 30% adoption in pilot and designed an A/B plan to measure travel‑time savings.</p>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Balanced path length, wait time, and comfort using Ripley’s K‑function and crowd‑sourced safety ratings; 30% pilot adoption; A/B plan for travel‑time savings.</p>
         <div class="mt-4 flex flex-wrap gap-2 text-xs">
           <span class="px-2 py-1 rounded-lg border">Python</span>
           <span class="px-2 py-1 rounded-lg border">GeoPandas</span>
           <span class="px-2 py-1 rounded-lg border">Flask</span>
         </div>
         <div class="mt-5 flex flex-wrap gap-3">
-          <a href="#" class="text-sm underline underline-offset-4">Case study</a>
-          <a href="#" class="text-sm underline underline-offset-4">Notebook</a>
-          <a href="#" class="text-sm underline underline-offset-4">Demo</a>
+          <a href="work/geo-routing/" class="text-sm underline underline-offset-4">Engagement write-up</a>
+          <a href="work/geo-routing/notebook-public.html" class="text-sm underline underline-offset-4">Replicated notebook (public data)</a>
+          <a href="work/geo-routing/screenshots/" class="text-sm underline underline-offset-4">Dashboard screenshots (redacted)</a>
         </div>
       </article>
 
-      <!-- Project 3 -->
+      <!-- Work 3 -->
       <article class="group rounded-3xl border border-slate-200 dark:border-slate-800 p-6 bg-white/60 dark:bg-slate-900/60 glass shadow-sm">
         <div class="flex items-center justify-between">
           <h3 class="text-xl font-bold">Tool‑Life Forecasting & Downtime Reduction</h3>
-          <span class="text-xs px-2 py-1 rounded-full bg-amber-600/10 text-amber-700 dark:text-amber-300 border border-amber-600/20">Forecasting</span>
+          <span class="text-xs px-2 py-1 rounded-full bg-slate-600/10 text-slate-700 dark:text-slate-300 border border-slate-600/20">Industry Work</span>
         </div>
-        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Random Forest regression on multi‑sensor data with 10‑fold CV; R² ~0.99 and MAE &lt; 10. Led to 10% tooling cost reduction and proactive maintenance via live dashboard + email alerts.</p>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">RF regression on multi‑sensor data with 10‑fold CV; R² ~0.99 and MAE &lt; 10. Led to ~10% tooling cost reduction and proactive maintenance via live alerts.</p>
         <div class="mt-4 flex flex-wrap gap-2 text-xs">
           <span class="px-2 py-1 rounded-lg border">Python</span>
           <span class="px-2 py-1 rounded-lg border">Power BI</span>
           <span class="px-2 py-1 rounded-lg border">SQL</span>
         </div>
         <div class="mt-5 flex flex-wrap gap-3">
-          <a href="#" class="text-sm underline underline-offset-4">Case study</a>
-          <a href="#" class="text-sm underline underline-offset-4">Notebook</a>
-          <a href="#" class="text-sm underline underline-offset-4">Dashboard</a>
+          <a href="work/tool-life/" class="text-sm underline underline-offset-4">Engagement write-up</a>
+          <a href="work/tool-life/notebook-public.html" class="text-sm underline underline-offset-4">Replicated notebook (public data)</a>
+          <a href="work/tool-life/screenshots/" class="text-sm underline underline-offset-4">Dashboard screenshots (redacted)</a>
         </div>
       </article>
 
-      <!-- Project 4 -->
+      <!-- Work 4 -->
       <article class="group rounded-3xl border border-slate-200 dark:border-slate-800 p-6 bg-white/60 dark:bg-slate-900/60 glass shadow-sm">
         <div class="flex items-center justify-between">
           <h3 class="text-xl font-bold">Fraud False‑Positive Reduction</h3>
-          <span class="text-xs px-2 py-1 rounded-full bg-rose-600/10 text-rose-700 dark:text-rose-300 border border-rose-600/20">Risk</span>
+          <span class="text-xs px-2 py-1 rounded-full bg-slate-600/10 text-slate-700 dark:text-slate-300 border border-slate-600/20">Industry Work</span>
         </div>
-        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Segmented 100k+ fraud events with NN + clustering; cut false positives by 15%, recaptured ~$2k/day revenue, and standardized KPI tracking for 20+ analysts via Power BI.</p>
+        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Segmented 100k+ fraud events with NN + clustering; cut false positives by 15%, recaptured ~$2k/day revenue, standardized KPIs for 20+ analysts.</p>
         <div class="mt-4 flex flex-wrap gap-2 text-xs">
           <span class="px-2 py-1 rounded-lg border">TensorFlow</span>
           <span class="px-2 py-1 rounded-lg border">Power BI</span>
           <span class="px-2 py-1 rounded-lg border">SQL</span>
         </div>
         <div class="mt-5 flex flex-wrap gap-3">
-          <a href="#" class="text-sm underline underline-offset-4">Case study</a>
-          <a href="#" class="text-sm underline underline-offset-4">Notebook</a>
-          <a href="#" class="text-sm underline underline-offset-4">Dashboard</a>
+          <a href="work/fraud-fp/" class="text-sm underline underline-offset-4">Engagement write-up</a>
+          <a href="work/fraud-fp/notebook-public.html" class="text-sm underline underline-offset-4">Replicated notebook (public data)</a>
+          <a href="work/fraud-fp/screenshots/" class="text-sm underline underline-offset-4">Dashboard screenshots (redacted)</a>
         </div>
       </article>
 
-      <!-- Project 5 -->
+    </div>
+  </section>
+
+  <!-- Personal Projects -->
+  <section id="personal-projects" class="max-w-6xl mx-auto px-4 py-12">
+    <div class="flex items-end justify-between gap-4">
+      <h2 class="text-3xl md:text-4xl font-extrabold">Personal Projects</h2>
+      <a class="text-sm underline underline-offset-4" href="https://github.com/daveqwerty1007" target="_blank" rel="noopener">All repositories</a>
+    </div>
+    <p class="mt-3 text-slate-600 dark:text-slate-300">Open-source and fully shareable projects with live repos and demos.</p>
+
+    <div class="mt-8 grid md:grid-cols-2 gap-6">
+      <!-- K-pop E-commerce Project -->
       <article class="group rounded-3xl border border-slate-200 dark:border-slate-800 p-6 bg-white/60 dark:bg-slate-900/60 glass shadow-sm">
         <div class="flex items-center justify-between">
           <h3 class="text-xl font-bold">K‑pop Trading Card E‑commerce Analytics</h3>
-          <span class="text-xs px-2 py-1 rounded-full bg-sky-600/10 text-sky-700 dark:text-sky-300 border border-sky-600/20">End‑to‑End</span>
+          <span class="text-xs px-2 py-1 rounded-full bg-sky-600/10 text-sky-700 dark:text-sky-300 border border-sky-600/20">Open Source</span>
         </div>
         <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">Full‑stack shop with SQL pipelines, demand forecasting, and a rule‑based recommender; improved product discoverability by ~20% and enabled smarter restocking.</p>
         <div class="mt-4 flex flex-wrap gap-2 text-xs">
@@ -178,12 +189,11 @@
           <span class="px-2 py-1 rounded-lg border">pandas</span>
         </div>
         <div class="mt-5 flex flex-wrap gap-3">
-          <a href="#" class="text-sm underline underline-offset-4">Case study</a>
-          <a href="#" class="text-sm underline underline-offset-4">Repo</a>
+          <a href="projects/kpop-ecom/" class="text-sm underline underline-offset-4">Case study</a>
+          <a href="https://github.com/daveqwerty1007" class="text-sm underline underline-offset-4" target="_blank" rel="noopener">Repo</a>
           <a href="#" class="text-sm underline underline-offset-4">Live Demo</a>
         </div>
       </article>
-
     </div>
   </section>
 
@@ -207,25 +217,22 @@
   <section id="contact" class="max-w-6xl mx-auto px-4 py-12">
     <div class="rounded-3xl border border-slate-200 dark:border-slate-800 p-8 bg-white/60 dark:bg-slate-900/60 glass shadow-sm">
       <h2 class="text-3xl md:text-4xl font-extrabold">Contact</h2>
-      <p class="mt-3 text-slate-600 dark:text-slate-300">Reach out for roles, collaborations, or questions about my projects.</p>
+      <p class="mt-3 text-slate-600 dark:text-slate-300">Reach out for roles, collaborations, or questions about my work.</p>
       <div class="mt-6 grid sm:grid-cols-2 gap-4 text-sm">
         <a class="block p-4 rounded-2xl border hover:border-indigo-400" href="mailto:jianbo.zhao1007@gmail.com">📧 jianbo.zhao1007@gmail.com</a>
         <a class="block p-4 rounded-2xl border hover:border-indigo-400" href="https://www.linkedin.com/in/j394zhao" target="_blank" rel="noopener">🔗 LinkedIn</a>
         <a class="block p-4 rounded-2xl border hover:border-indigo-400" href="https://github.com/daveqwerty1007" target="_blank" rel="noopener">💻 GitHub</a>
         <a class="block p-4 rounded-2xl border hover:border-indigo-400" href="resume.pdf" target="_blank" rel="noopener">📄 Resume (PDF)</a>
       </div>
+      <p class="mt-6 text-xs text-slate-500">Note: Engagement summaries are anonymized; shared artifacts use synthetic or public datasets.</p>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="py-10 text-center text-xs text-slate-500 dark:text-slate-400">
     <div class="max-w-6xl mx-auto px-4">
       <p>© <span id="yr"></span> Jianbo Zhao. Built with HTML + Tailwind.</p>
     </div>
   </footer>
-
-  <script>
-    document.getElementById('yr').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>
 </html>
