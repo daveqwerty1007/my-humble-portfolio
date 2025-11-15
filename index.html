@@ -485,7 +485,11 @@
 
   <footer class="py-8 text-center text-xs text-[var(--muted)]">
     <div class="max-w-6xl mx-auto px-4">
-      <p>© <span id="yr"></span> Jianbo Zhao · Built in a Waterloo-inspired black &amp; gold theme.</p>
+      <p>
+        © <span id="yr"></span> Jianbo Zhao · Made with 
+        <span class="text-[var(--accent)] animate-pulse">♥</span> 
+        in Waterloo.
+      </p>
     </div>
   </footer>
 
@@ -506,5 +510,9 @@
       }
     }
   </script>
+  <script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
