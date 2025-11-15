@@ -3,325 +3,508 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jianbo Zhao • Selected Work & Projects</title>
-  <meta name="description" content="Selected work and projects in product analytics, operational workflows, and process optimization." />
+  <title>Jianbo Zhao • Product & Operations Analytics</title>
+  <meta name="description" content="Portfolio for Jianbo Zhao – product analytics, operational analytics, manufacturing data, process optimization, and quality analytics." />
   <meta name="author" content="Jianbo Zhao" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root {color-scheme: light dark}
-    html {scroll-behavior: smooth}
-    body {font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans"}
-    .glass {backdrop-filter: blur(10px)}
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans"; }
+
+    :root {
+      --bg: #000000;              /* main background (black) */
+      --bg-elevated: #111827;     /* cards (slate-900-ish) */
+      --bg-soft: #020617;         /* slightly different black */
+      --text: #f9fafb;            /* near-white */
+      --muted: #9ca3af;           /* gray-400 */
+      --border: #1f2933;          /* dark border */
+      --accent: #ffcc33;          /* Waterloo gold */
+      --accent-hover: #ffb81c;    /* hover gold */
+      --accent-soft: rgba(255, 204, 51, 0.12);
+    }
+
+    .glass {
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
   </style>
-  <script>
-    const stored = localStorage.getItem('theme');
-    if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      document.documentElement.classList.add('dark');
-    }
-    function toggleTheme(){
-      const isDark = document.documentElement.classList.toggle('dark');
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    }
-  </script>
 </head>
-<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+<body class="bg-[var(--bg)] text-[var(--text)]">
+
   <!-- Header -->
-  <header class="sticky top-0 z-50 bg-white/70 dark:bg-slate-900/60 glass border-b border-slate-200/60 dark:border-slate-800">
+  <header class="sticky top-0 z-50 bg-[color:rgba(0,0,0,0.88)] glass border-b border-[var(--border)]">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-      <a href="#home" class="font-extrabold text-xl tracking-tight">Jianbo Zhao</a>
-      <nav class="hidden md:flex gap-6 text-sm font-medium">
-        <a href="#experience" class="hover:text-indigo-600">Experience</a>
-        <a href="#personal-projects" class="hover:text-indigo-600">Personal Projects</a>
-        <a href="#about" class="hover:text-indigo-600">About</a>
-        <a href="#contact" class="hover:text-indigo-600">Contact</a>
-        <a href="resume.pdf" class="hover:text-indigo-600" target="_blank" rel="noopener">Resume</a>
+      <a href="#home" class="font-extrabold text-xl tracking-tight">
+        Jianbo Zhao
+      </a>
+      <nav class="hidden md:flex gap-6 text-sm font-medium text-[var(--muted)]">
+        <a href="#experience" class="hover:text-[var(--accent)]">Experience</a>
+        <a href="#personal-projects" class="hover:text-[var(--accent)]">Projects</a>
+        <a href="#about" class="hover:text-[var(--accent)]">About</a>
+        <a href="#contact" class="hover:text-[var(--accent)]">Contact</a>
+        <a href="resume.pdf" target="_blank" rel="noopener" class="hover:text-[var(--accent)]">Resume</a>
       </nav>
-      <div class="flex items-center gap-2">
-        <a href="https://github.com/daveqwerty1007" target="_blank" rel="noopener" class="px-3 py-1.5 rounded-xl bg-slate-900 text-white dark:bg-white dark:text-slate-900 text-sm">GitHub</a>
-        <button onclick="toggleTheme()" class="px-3 py-1.5 rounded-xl border border-slate-200 dark:border-slate-700 text-sm">Toggle</button>
+      <div class="flex items-center gap-2 text-sm">
+        <a href="https://github.com/daveqwerty1007"
+           target="_blank" rel="noopener"
+           class="px-3 py-1.5 rounded-xl bg-[var(--accent)] text-black font-semibold hover:bg-[var(--accent-hover)] transition">
+          GitHub
+        </a>
       </div>
     </div>
   </header>
 
   <!-- Hero -->
-  <section id="home" class="max-w-6xl mx-auto px-4 pt-12 pb-8">
+  <section id="home" class="max-w-6xl mx-auto px-4 pt-12 pb-10">
     <div class="grid md:grid-cols-5 gap-8 items-center">
       <div class="md:col-span-3">
-        <p class="uppercase tracking-[0.3em] text-xs text-slate-500 dark:text-slate-400">Product, Operations & Quality Analytics</p>
-        <h1 class="mt-3 text-4xl md:text-5xl font-extrabold leading-tight">
-          Data analyst skilled in product metrics, operational workflows, and process optimization.
-        </h1>
-        <p class="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-2xl">
-          I analyze user behavior, identify bottlenecks, design dashboards, and validate hypotheses through experiments,
-          transforming raw data into actionable insights for product, operations, and quality teams in fast-paced business
-          environments.
+        <p class="uppercase tracking-[0.35em] text-xs text-[var(--muted)]">
+          Product • Operations • Manufacturing • Quality
         </p>
+        <h1 class="mt-3 font-extrabold leading-tight">
+          <span class="block text-4xl md:text-6xl">
+            Data Analyst
+          </span>
+          <span class="block text-xl md:text-2xl text-[var(--muted)] font-semibold mt-2">
+            specializing in product analytics, operations, manufacturing data,
+            process optimization, and quality.
+          </span>
+        </h1>
+        <p class="mt-4 text-lg text-[var(--muted)] max-w-2xl">
+          I analyze user behavior and process data, identify bottlenecks, design KPI dashboards, and validate hypotheses
+          through experiments—turning raw data into actionable insights for product, operations, manufacturing, and
+          quality teams in fast-paced business environments.
+        </p>
+
         <div class="mt-6 flex flex-wrap gap-3">
-          <a href="#experience" class="px-5 py-2.5 rounded-2xl bg-indigo-600 text-white font-semibold shadow">View Experience</a>
-          <a href="#contact" class="px-5 py-2.5 rounded-2xl border border-slate-300 dark:border-slate-700">Contact</a>
-          <a href="resume.pdf" class="px-5 py-2.5 rounded-2xl border border-indigo-200 text-indigo-700 dark:border-indigo-700/60 dark:text-indigo-200" target="_blank" rel="noopener">Resume</a>
+          <a href="#experience"
+             class="px-5 py-2.5 rounded-2xl bg-[var(--accent)] text-black font-semibold shadow hover:bg-[var(--accent-hover)] transition">
+            View Experience
+          </a>
+          <a href="#contact"
+             class="px-5 py-2.5 rounded-2xl border border-[var(--border)] text-[var(--text)] hover:border-[var(--accent)] transition">
+            Contact
+          </a>
+          <a href="resume.pdf" target="_blank" rel="noopener"
+             class="px-5 py-2.5 rounded-2xl border border-[var(--accent)] text-[var(--accent)] hover:bg-[var(--accent-soft)] transition">
+            Resume
+          </a>
         </div>
-        <div class="mt-6 grid sm:grid-cols-3 gap-3 text-sm text-slate-600 dark:text-slate-300">
-          <div class="rounded-2xl border border-slate-200/70 dark:border-slate-800 p-3">
-            <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">Location</p>
-            <p class="font-semibold">Toronto, ON</p>
+
+        <!-- Hero info cards -->
+        <div class="mt-6 grid sm:grid-cols-3 gap-3 text-sm">
+          <div class="rounded-2xl border border-[var(--border)] bg-[var(--bg-elevated)] p-3">
+            <p class="text-xs uppercase tracking-wide text-[var(--muted)]">Location</p>
+            <p class="font-semibold mt-1">Toronto, ON</p>
           </div>
-          <div class="rounded-2xl border border-slate-200/70 dark:border-slate-800 p-3">
-            <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">Availability</p>
-            <p class="font-semibold">Open to Analyst roles</p>
+          <div class="rounded-2xl border border-[var(--border)] bg-[var(--bg-elevated)] p-3">
+            <p class="text-xs uppercase tracking-wide text-[var(--muted)]">Target roles</p>
+            <p class="font-semibold mt-1">Product / Ops / Manufacturing / Quality Analyst</p>
           </div>
-          <div class="rounded-2xl border border-slate-200/70 dark:border-slate-800 p-3">
-            <p class="text-xs uppercase tracking-wide text-slate-500 dark:text-slate-400">Contact</p>
-            <p class="font-semibold">(437) 341-1881 · jianbo.zhao1007@gmail.com</p>
+          <div class="rounded-2xl border border-[var(--border)] bg-[var(--bg-elevated)] p-3">
+            <p class="text-xs uppercase tracking-wide text-[var(--muted)]">Contact</p>
+            <p class="font-semibold mt-1">(437) 341-1881 · jianbo.zhao1007@gmail.com</p>
           </div>
         </div>
       </div>
+
+      <!-- Right column: pfp + tools -->
       <div class="md:col-span-2">
-        <div class="rounded-3xl p-6 border border-slate-200 dark:border-slate-800 bg-white/60 dark:bg-slate-900/60 glass shadow-sm">
-          <h2 class="font-bold text-lg">Tech Stack &amp; Tools</h2>
-          <ul class="mt-3 grid grid-cols-2 gap-2 text-sm">
-            <li>Python (pandas, NumPy)</li>
-            <li>scikit-learn</li>
-            <li>SQL / Databases</li>
-            <li>Power BI · Tableau</li>
-            <li>AWS · Docker</li>
-            <li>Airflow · ETL</li>
-            <li>Excel modeling</li>
-            <li>A/B testing</li>
-          </ul>
+        <div class="flex flex-col items-center md:items-stretch gap-4">
+          <!-- Profile photo -->
+          <img
+            src="Pfp.jpg"
+            alt="Jianbo Zhao"
+            class="w-32 h-32 rounded-full object-cover border border-[var(--accent)] shadow-md"
+          />
+
+          <!-- Tech Stack card -->
+          <div class="rounded-3xl p-6 border border-[var(--border)] bg-[var(--bg-elevated)] glass shadow-sm w-full">
+            <h2 class="font-bold text-lg">Tech Stack &amp; Tools</h2>
+            <ul class="mt-3 grid grid-cols-2 gap-2 text-sm text-[var(--muted)]">
+              <li>Python (pandas, NumPy)</li>
+              <li>scikit-learn</li>
+              <li>SQL / Databases</li>
+              <li>Power BI · Tableau</li>
+              <li>Excel modeling</li>
+              <li>AWS · Docker</li>
+              <li>Airflow · ETL</li>
+              <li>A/B testing</li>
+            </ul>
+          </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Company logos row -->
+    <div class="mt-10">
+      <p class="text-xs uppercase tracking-[0.25em] text-[var(--muted)]">
+        Previously contributed at
+      </p>
+      <div class="mt-3 flex flex-wrap items-center gap-6 opacity-85">
+        <img src="Canada_Computers_&_Electronics_2019.png" alt="Canada Computers & Electronics" class="h-8 object-contain" />
+        <img src="Alphabet_Inc_Logo_2015.svg.png" alt="Alphabet" class="h-8 object-contain" />
+        <img src="FAW-Volkswagen_logo.png" alt="Volkswagen FAW Engine" class="h-8 object-contain" />
+        <img src="Ping_An_Bank_Logo.svg.png" alt="Ping An Bank" class="h-8 object-contain" />
       </div>
     </div>
   </section>
 
-  <!-- Highlight -->
-  <section class="max-w-6xl mx-auto px-4 pb-8">
-    <div class="rounded-3xl border border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/60 glass p-8 shadow-sm">
+  <!-- Highlight / Summary -->
+  <section class="max-w-6xl mx-auto px-4 pb-10">
+    <div class="rounded-3xl border border-[var(--border)] bg-[var(--bg-elevated)] glass p-8 shadow-sm">
       <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-[0.4em] text-indigo-500">Highlight</p>
-          <h2 class="mt-2 text-3xl font-extrabold">Transforming raw data into decisions for cross-functional teams</h2>
+          <p class="text-xs font-semibold uppercase tracking-[0.35em] text-[var(--accent)]">Highlight</p>
+          <h2 class="mt-2 text-3xl font-extrabold">
+            Turning behavioral and process data into decisions for cross-functional teams.
+          </h2>
         </div>
-        <p class="text-slate-600 dark:text-slate-300 md:max-w-2xl">
-          Experienced in analyzing user behavior, identifying bottlenecks, designing KPI dashboards, and improving
-          decision-making for technical and business stakeholders while supporting product, operations, and quality initiatives.
+        <p class="text-sm md:max-w-xl text-[var(--muted)]">
+          Experience across product analytics, operational workflows, manufacturing data, and fraud risk. Comfortable working
+          with engineers, operators, and business stakeholders to improve data quality, monitor KPIs, and drive measurable
+          improvements in efficiency, reliability, and user outcomes.
         </p>
       </div>
       <dl class="mt-6 grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-4">
+        <div class="rounded-2xl border border-[var(--border)] bg-[var(--bg-soft)] p-4">
           <dt class="font-semibold">Core Competencies</dt>
-          <dd class="mt-2 text-slate-600 dark:text-slate-300">
+          <dd class="mt-2 text-[var(--muted)]">
             Root-cause analysis, workflow mapping, requirement gathering, data quality validation, and reporting automation.
           </dd>
         </div>
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-4">
-          <dt class="font-semibold">Product Analytics</dt>
-          <dd class="mt-2 text-slate-600 dark:text-slate-300">
-            Product analytics, behavioral funnels, KPI dashboard development, experimentation, and A/B testing.
+        <div class="rounded-2xl border border-[var(--border)] bg-[var(--bg-soft)] p-4">
+          <dt class="font-semibold">Product &amp; Behavioral Analytics</dt>
+          <dd class="mt-2 text-[var(--muted)]">
+            Funnel analysis, feature experimentation, KPI definition, and recommendation logic for user engagement.
           </dd>
         </div>
-        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-4">
-          <dt class="font-semibold">Operations &amp; ETL</dt>
-          <dd class="mt-2 text-slate-600 dark:text-slate-300">
-            Statistical analysis, ETL workflows, and process optimization across fast-paced business environments.
+        <div class="rounded-2xl border border-[var(--border)] bg-[var(--bg-soft)] p-4">
+          <dt class="font-semibold">Operations, Manufacturing &amp; Quality</dt>
+          <dd class="mt-2 text-[var(--muted)]">
+            Tool-life monitoring, capacity planning, fraud KPI tracking, and continuous improvement initiatives.
           </dd>
         </div>
       </dl>
     </div>
   </section>
 
-  <!-- Professional Experience -->
+  <!-- Experience -->
   <section id="experience" class="max-w-6xl mx-auto px-4 py-12">
     <div class="flex items-end justify-between gap-4">
       <h2 class="text-3xl md:text-4xl font-extrabold">Professional Experience</h2>
-      <span class="text-sm text-slate-500">Aug 2025 – Present · Internships 2021-2024</span>
+      <span class="text-sm text-[var(--muted)]">Internships &amp; roles across tech, retail, manufacturing, and finance.</span>
     </div>
-    <p class="mt-3 text-slate-600 dark:text-slate-300">
-      Hands-on work spanning retail operations, big-tech product analytics, manufacturing data, and financial risk.
-    </p>
 
     <div class="mt-8 grid md:grid-cols-2 gap-6">
       <!-- Canada Computers -->
-      <article class="rounded-3xl border border-slate-200 dark:border-slate-800 p-6 bg-white/60 dark:bg-slate-900/60 glass shadow-sm">
+      <article class="rounded-3xl border border-[var(--border)] p-6 bg-[var(--bg-elevated)] glass shadow-sm">
         <div class="flex items-center justify-between gap-3">
           <div>
-            <p class="text-xs uppercase tracking-wide text-slate-500">Canada Computers &amp; Electronics · North York, ON</p>
+            <p class="text-xs uppercase tracking-wide text-[var(--muted)]">
+              Canada Computers &amp; Electronics · North York, ON
+            </p>
             <h3 class="text-xl font-bold">Technical Sales &amp; ERP Operations Associate</h3>
           </div>
-          <span class="text-xs px-2 py-1 rounded-full bg-slate-600/10 text-slate-700 dark:text-slate-300 border border-slate-600/20">Aug 2025 – Present</span>
+          <span class="text-xs px-2 py-1 rounded-full bg-[var(--accent-soft)] text-[var(--accent)] border border-[var(--accent)]">
+            Aug 2025 – Present
+          </span>
         </div>
-        <ul class="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
-          <li>Delivered daily frontline sales and service support for both personal and B2B customers, translating workflow needs into optimized PC builds and component recommendations, contributing to a 15% increase in repeat client visits.</li>
-          <li>Improved ERP inventory accuracy by 22% by auditing bin locations, correcting SKU mismatches, and coordinating with warehouse staff to resolve data gaps, reducing restock errors and improving product availability for high-demand items.</li>
-          <li>Accelerated restock and pricing decisions by building weekly Excel demand reports that highlighted SKU turnover and margin trends, helping managers cut replenishment time from two days to same-day for key product categories.</li>
-        </ul>
-        <div class="mt-4 flex flex-wrap gap-2 text-xs">
-          <span class="px-2 py-1 rounded-lg border">Excel</span>
-          <span class="px-2 py-1 rounded-lg border">ERP analytics</span>
-          <span class="px-2 py-1 rounded-lg border">Process optimization</span>
+        <div class="relative">
+          <div id="cc-block" class="line-clamp-3 text-sm text-[var(--muted)] space-y-3">
+            <p>Delivered daily frontline sales and service support for both personal and B2B customers, translating workflow needs into optimized PC builds and component recommendations, contributing to a 15% increase in repeat client visits.</p>
+            <p>Improved ERP inventory accuracy by 22% by auditing bin locations, correcting SKU mismatches, and coordinating with warehouse staff to resolve data gaps, reducing restock errors and improving product availability for high-demand items.</p>
+            <p>Accelerated restock and pricing decisions by building weekly Excel demand reports that highlighted SKU turnover and margin trends, helping managers cut replenishment time from two days to same-day for key product categories.</p>
+          </div>
+
+          <button id="cc-toggle"
+                  onclick="toggleBlock('cc-block','cc-toggle')"
+                  class="mt-2 text-[var(--accent)] underline underline-offset-4 text-xs">
+            Read more
+          </button>
+        </div>
+
+        <div class="mt-4 flex flex-wrap gap-2 text-xs text-[var(--muted)]">
+          <span class="px-2 py-1 rounded-lg border border-[var(--border)]">Excel</span>
+          <span class="px-2 py-1 rounded-lg border border-[var(--border)]">ERP analytics</span>
+          <span class="px-2 py-1 rounded-lg border border-[var(--border)]">Process optimization</span>
+        </div>
+        <div class="mt-4 flex flex-wrap gap-4 text-sm">
+          <a href="#" class="underline underline-offset-4 text-[var(--accent)]">Case Study</a>
+          <a href="#" class="underline underline-offset-4 text-[var(--accent)]">ERP Dashboard Demo</a>
         </div>
       </article>
 
       <!-- Alphabet -->
-      <article class="rounded-3xl border border-slate-200 dark:border-slate-800 p-6 bg-white/60 dark:bg-slate-900/60 glass shadow-sm">
+      <article class="rounded-3xl border border-[var(--border)] p-6 bg-[var(--bg-elevated)] glass shadow-sm">
         <div class="flex items-center justify-between gap-3">
           <div>
-            <p class="text-xs uppercase tracking-wide text-slate-500">Alphabet · California, USA (Remote)</p>
+            <p class="text-xs uppercase tracking-wide text-[var(--muted)]">
+              Alphabet · California, USA (Remote)
+            </p>
             <h3 class="text-xl font-bold">Data Analyst Intern</h3>
           </div>
-          <span class="text-xs px-2 py-1 rounded-full bg-slate-600/10 text-slate-700 dark:text-slate-300 border border-slate-600/20">May 2024 – Aug 2024</span>
+          <span class="text-xs px-2 py-1 rounded-full bg-[var(--accent-soft)] text-[var(--accent)] border border-[var(--accent)]">
+            May 2024 – Aug 2024
+          </span>
         </div>
-        <ul class="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
-          <li>Supported the development of a new email-marketing product by benchmarking pricing and features against Klaviyo, Omnisend, and Mailchimp; identified gaps in automation tools and starter-tier offerings and synthesized findings into a recommended freemium model and clearer feature roadmap, helping the product team deliver a pilot that improved client click-through rates by 12% and increased merchant sales by 6%.</li>
-          <li>Analyzed user-watch patterns for an anime-streaming partner struggling with low completion rates by grouping audiences by age, device type, and viewing behavior and building a lightweight content-recommendation prototype combining collaborative filtering with behavioral trends; A/B tests across 40,000 users reduced mid-season drop-off by 18% and increased discovery of under-watched titles by 20%.</li>
-          <li>Helped test an early version of a route-finding app built for walkers and cyclists by evaluating how safety and convenience ratings could be integrated into routing logic; cleaned and analyzed crowdsourced path data, mapped risk zones, and created a simple scoring model to balance route length with perceived comfort, contributing to a 27% user-adoption rate and 10–15% faster travel times on popular routes.</li>
-        </ul>
-        <div class="mt-4 flex flex-wrap gap-2 text-xs">
-          <span class="px-2 py-1 rounded-lg border">Python</span>
-          <span class="px-2 py-1 rounded-lg border">SQL</span>
-          <span class="px-2 py-1 rounded-lg border">A/B testing</span>
-          <span class="px-2 py-1 rounded-lg border">Product analytics</span>
+        <div class="relative">
+          <div id="alpha-block" class="line-clamp-3 text-sm text-[var(--muted)] space-y-3">
+            <p>Supported the development of a new email-marketing product by benchmarking pricing and features against Klaviyo, Omnisend, and Mailchimp; identified gaps in automation tools and starter-tier offerings and synthesized findings into a recommended freemium model and clearer feature roadmap, helping the product team deliver a pilot that improved client click-through rates by 12% and increased merchant sales by 6%.</p>
+            <p>Analyzed user-watch patterns for an anime-streaming partner struggling with low completion rates by grouping audiences by age, device type, and viewing behavior and building a lightweight content-recommendation prototype combining collaborative filtering with behavioral trends; A/B tests across 40,000 users reduced mid-season drop-off by 18% and increased discovery of under-watched titles by 20%.</p>
+            <p>Helped test an early version of a route-finding app built for walkers and cyclists by evaluating how safety and convenience ratings could be integrated into routing logic; cleaned and analyzed crowdsourced path data, mapped risk zones, and created a simple scoring model to balance route length with perceived comfort, contributing to a 27% user-adoption rate and 10–15% faster travel times on popular routes.</p>
+          </div>
+
+          <button id="alpha-toggle"
+                  onclick="toggleBlock('alpha-block','alpha-toggle')"
+                  class="mt-2 text-[var(--accent)] underline underline-offset-4 text-xs">
+            Read more
+          </button>
+        </div>
+
+        <div class="mt-4 flex flex-wrap gap-2 text-xs text-[var(--muted)]">
+          <span class="px-2 py-1 rounded-lg border border-[var(--border)]">Python</span>
+          <span class="px-2 py-1 rounded-lg border border-[var(--border)]">SQL</span>
+          <span class="px-2 py-1 rounded-lg border border-[var(--border)]">A/B testing</span>
+          <span class="px-2 py-1 rounded-lg border border-[var(--border)]">Product analytics</span>
+        </div>
+        <div class="mt-4 flex flex-wrap gap-4 text-sm">
+          <a href="#" class="underline underline-offset-4 text-[var(--accent)]">Email Product Analysis</a>
+          <a href="#" class="underline underline-offset-4 text-[var(--accent)]">Recommendation Model Notes</a>
         </div>
       </article>
 
       <!-- Volkswagen -->
-      <article class="rounded-3xl border border-slate-200 dark:border-slate-800 p-6 bg-white/60 dark:bg-slate-900/60 glass shadow-sm">
+      <article class="rounded-3xl border border-[var(--border)] p-6 bg-[var(--bg-elevated)] glass shadow-sm">
         <div class="flex items-center justify-between gap-3">
           <div>
-            <p class="text-xs uppercase tracking-wide text-slate-500">Volkswagen FAW Engine · Dalian, China</p>
+            <p class="text-xs uppercase tracking-wide text-[var(--muted)]">
+              Volkswagen FAW Engine · Dalian, China
+            </p>
             <h3 class="text-xl font-bold">Manufacturing Data Analyst Intern</h3>
           </div>
-          <span class="text-xs px-2 py-1 rounded-full bg-slate-600/10 text-slate-700 dark:text-slate-300 border border-slate-600/20">May 2022 – Aug 2022</span>
+          <span class="text-xs px-2 py-1 rounded-full bg-[var(--accent-soft)] text-[var(--accent)] border border-[var(--accent)]">
+            May 2022 – Aug 2022
+          </span>
         </div>
-        <ul class="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
-          <li>Improved tool-life prediction accuracy by analyzing CNC machining sensor data such as temperature, vibration, and spindle speed, enabling earlier detection of wear trends and reducing unexpected tool failures by 8% during the internship period.</li>
-          <li>Designed and deployed a real-time tool-health dashboard that visualized remaining cycles, highlighted anomalies, and flagged missing data, giving supervisors faster visibility into issues and reducing reaction time to tool problems by 30%.</li>
-          <li>Collaborated with engineers and machine operators to validate prediction thresholds and refine alert settings, improving maintenance planning and reducing last-minute tool-change disruptions by 12% across two pilot machining lines.</li>
-        </ul>
-        <div class="mt-4 flex flex-wrap gap-2 text-xs">
-          <span class="px-2 py-1 rounded-lg border">Python</span>
-          <span class="px-2 py-1 rounded-lg border">Dashboarding</span>
-          <span class="px-2 py-1 rounded-lg border">Manufacturing analytics</span>
+        <div class="relative">
+          <div id="vw-block" class="line-clamp-3 text-sm text-[var(--muted)] space-y-3">
+            <p>Improved tool-life prediction accuracy by analyzing CNC machining sensor data such as temperature, vibration, and spindle speed, enabling earlier detection of wear trends and reducing unexpected tool failures by 8% during the internship period.</p>
+            <p>Designed and deployed a real-time tool-health dashboard that visualized remaining cycles, highlighted anomalies, and flagged missing data, giving supervisors faster visibility into issues and reducing reaction time to tool problems by 30%.</p>
+            <p>Collaborated with engineers and machine operators to validate prediction thresholds and refine alert settings, improving maintenance planning and reducing last-minute tool-change disruptions by 12% across two pilot machining lines.</p>
+          </div>
+
+          <button id="vw-toggle"
+                  onclick="toggleBlock('vw-block','vw-toggle')"
+                  class="mt-2 text-[var(--accent)] underline underline-offset-4 text-xs">
+            Read more
+          </button>
+        </div>
+
+        <div class="mt-4 flex flex-wrap gap-2 text-xs text-[var(--muted)]">
+          <span class="px-2 py-1 rounded-lg border border-[var(--border)]">Python</span>
+          <span class="px-2 py-1 rounded-lg border border-[var(--border)]">Dashboarding</span>
+          <span class="px-2 py-1 rounded-lg border border-[var(--border)]">Manufacturing analytics</span>
+        </div>
+        <div class="mt-4 flex flex-wrap gap-4 text-sm">
+          <a href="#" class="underline underline-offset-4 text-[var(--accent)]">Tool-Life Analytics Summary</a>
+          <a href="#" class="underline underline-offset-4 text-[var(--accent)]">Dashboard Screenshots</a>
         </div>
       </article>
 
       <!-- Ping An -->
-      <article class="rounded-3xl border border-slate-200 dark:border-slate-800 p-6 bg-white/60 dark:bg-slate-900/60 glass shadow-sm">
+      <article class="rounded-3xl border border-[var(--border)] p-6 bg-[var(--bg-elevated)] glass shadow-sm">
         <div class="flex items-center justify-between gap-3">
           <div>
-            <p class="text-xs uppercase tracking-wide text-slate-500">Ping An Bank · Dalian, China</p>
+            <p class="text-xs uppercase tracking-wide text-[var(--muted)]">
+              Ping An Bank · Dalian, China
+            </p>
             <h3 class="text-xl font-bold">Fraud-Risk Analyst Intern</h3>
           </div>
-          <span class="text-xs px-2 py-1 rounded-full bg-slate-600/10 text-slate-700 dark:text-slate-300 border border-slate-600/20">May 2021 – Aug 2021</span>
+          <span class="text-xs px-2 py-1 rounded-full bg-[var(--accent-soft)] text-[var(--accent)] border border-[var(--accent)]">
+            May 2021 – Aug 2021
+          </span>
         </div>
-        <ul class="mt-4 space-y-3 text-sm text-slate-600 dark:text-slate-300">
-          <li>Reduced false-positive card blocks by analyzing 100k+ transactions to separate high-risk cases from normal spending, preventing $1,500–$2,000 in daily losses and restoring approval for hundreds of legitimate transactions.</li>
-          <li>Identified key drivers of alert errors by clustering fraud events and presenting insights to model engineers, leading to rule updates that lowered the false-positive rate by 14% and improved detection accuracy.</li>
-          <li>Built a Power BI dashboard to standardize KPI tracking, segment alert behavior, and flag early-warning trends, enabling 20+ analysts to monitor performance more consistently and respond faster during high-volume periods.</li>
-        </ul>
-        <div class="mt-4 flex flex-wrap gap-2 text-xs">
-          <span class="px-2 py-1 rounded-lg border">Power BI</span>
-          <span class="px-2 py-1 rounded-lg border">SQL</span>
-          <span class="px-2 py-1 rounded-lg border">Risk analytics</span>
+        <div class="relative">
+          <div id="ping-block" class="line-clamp-3 text-sm text-[var(--muted)] space-y-3">
+            <p>Reduced false-positive card blocks by analyzing 100k+ transactions to separate high-risk cases from normal spending, preventing $1,500–$2,000 in daily losses and restoring approval for hundreds of legitimate transactions.</p>
+            <p>Identified key drivers of alert errors by clustering fraud events and presenting insights to model engineers, leading to rule updates that lowered the false-positive rate by 14% and improved detection accuracy.</p>
+            <p>Built a Power BI dashboard to standardize KPI tracking, segment alert behavior, and flag early-warning trends, enabling 20+ analysts to monitor performance more consistently and respond faster during high-volume periods.</p>
+          </div>
+
+          <!-- Read more button -->
+          <button id="ping-toggle"
+                  onclick="toggleBlock('ping-block', 'ping-toggle')"
+                  class="mt-2 text-[var(--accent)] underline underline-offset-4 text-xs">
+            Read more
+          </button>
+        </div>
+        <div class="mt-4 flex flex-wrap gap-2 text-xs text-[var(--muted)]">
+          <span class="px-2 py-1 rounded-lg border border-[var(--border)]">Power BI</span>
+          <span class="px-2 py-1 rounded-lg border border-[var(--border)]">SQL</span>
+          <span class="px-2 py-1 rounded-lg border border-[var(--border)]">Risk analytics</span>
+        </div>
+        <div class="mt-4 flex flex-wrap gap-4 text-sm">
+          <a href="#" class="underline underline-offset-4 text-[var(--accent)]">Fraud KPI Dashboard Demo</a>
+          <a href="#" class="underline underline-offset-4 text-[var(--accent)]">Clustering Analysis Notes</a>
         </div>
       </article>
     </div>
   </section>
 
-  <!-- Personal Projects -->
+  <!-- Projects -->
   <section id="personal-projects" class="max-w-6xl mx-auto px-4 py-12">
     <div class="flex items-end justify-between gap-4">
-      <h2 class="text-3xl md:text-4xl font-extrabold">Personal Projects</h2>
-      <a class="text-sm underline underline-offset-4" href="https://github.com/daveqwerty1007" target="_blank" rel="noopener">All repositories</a>
+      <h2 class="text-3xl md:text-4xl font-extrabold">Selected Project</h2>
+      <a class="text-sm underline underline-offset-4 text-[var(--accent)]"
+         href="https://github.com/daveqwerty1007"
+         target="_blank" rel="noopener">
+        All repositories
+      </a>
     </div>
-    <p class="mt-3 text-slate-600 dark:text-slate-300">
-      Open-source and fully shareable projects with live repositories and demos.
+    <p class="mt-3 text-sm text-[var(--muted)]">
+      Independent work combining full-stack development with product and operational analytics.
     </p>
 
     <div class="mt-8 grid md:grid-cols-2 gap-6">
       <!-- K-pop E-commerce Project -->
-      <article class="group rounded-3xl border border-slate-200 dark:border-slate-800 p-6 bg-white/60 dark:bg-slate-900/60 glass shadow-sm">
+      <article class="group rounded-3xl border border-[var(--border)] p-6 bg-[var(--bg-elevated)] glass shadow-sm">
         <div class="flex items-center justify-between">
           <h3 class="text-xl font-bold">K-pop Trading Card E-commerce Analytics</h3>
-          <span class="text-xs px-2 py-1 rounded-full bg-sky-600/10 text-sky-700 dark:text-sky-300 border border-sky-600/20">Open Source</span>
+          <span class="text-xs px-2 py-1 rounded-full bg-[var(--accent-soft)] text-[var(--accent)] border border-[var(--accent)]">
+            Independent Project
+          </span>
         </div>
-        <p class="mt-2 text-sm text-slate-600 dark:text-slate-300">
-          Full-stack marketplace with SQL pipelines, demand forecasting, and a rule-based recommendation layer to improve
-          product discoverability and support data-driven restocking decisions.
+        <p class="mt-2 text-sm text-[var(--muted)]">
+          Full-stack marketplace for trading and reselling K-pop cards, with SQL-backed pipelines for basic demand
+          forecasting and a rule-based recommendation layer to improve product discoverability and inform restocking decisions.
         </p>
-        <div class="mt-4 flex flex-wrap gap-2 text-xs">
-          <span class="px-2 py-1 rounded-lg border">React</span>
-          <span class="px-2 py-1 rounded-lg border">Flask</span>
-          <span class="px-2 py-1 rounded-lg border">SQL</span>
-          <span class="px-2 py-1 rounded-lg border">pandas</span>
+        <div class="mt-4 flex flex-wrap gap-2 text-xs text-[var(--muted)]">
+          <span class="px-2 py-1 rounded-lg border border-[var(--border)]">React</span>
+          <span class="px-2 py-1 rounded-lg border border-[var(--border)]">Flask</span>
+          <span class="px-2 py-1 rounded-lg border border-[var(--border)]">SQL</span>
+          <span class="px-2 py-1 rounded-lg border border-[var(--border)]">pandas</span>
         </div>
-        <div class="mt-5 flex flex-wrap gap-3">
-          <a href="projects/kpop-ecom/" class="text-sm underline underline-offset-4">Case study</a>
-          <a href="https://github.com/daveqwerty1007" class="text-sm underline underline-offset-4" target="_blank" rel="noopener">Repo</a>
-          <a href="#" class="text-sm underline underline-offset-4">Live demo</a>
+        <div class="mt-5 flex flex-wrap gap-4 text-sm">
+          <a href="projects/kpop-ecom/" class="underline underline-offset-4 text-[var(--accent)]">Demo</a>
+          <a href="https://github.com/daveqwerty1007/kpop-trading-card-app" target="_blank" rel="noopener" class="underline underline-offset-4 text-[var(--accent)]">Repo</a>
         </div>
       </article>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="max-w-6xl mx-auto px-4 py-12">
-    <div class="rounded-3xl border border-slate-200 dark:border-slate-800 p-8 bg-white/60 dark:bg-slate-900/60 glass shadow-sm">
-      <h2 class="text-3xl md:text-4xl font-extrabold">Education &amp; Focus Areas</h2>
-      <div class="mt-4 grid md:grid-cols-3 gap-6">
-        <div>
-          <p class="text-xs uppercase tracking-wide text-slate-500">University of Waterloo · Waterloo, ON</p>
-          <p class="mt-2 font-semibold">Bachelor of Mathematics (Honours)</p>
-          <p class="text-sm text-slate-600 dark:text-slate-300">Sep 2020 – Jul 2025</p>
-          <p class="mt-3 text-sm text-slate-600 dark:text-slate-300">
-            Relevant coursework: Statistical Learning, Forecasting, Visualization, Linear Models, SQL &amp; Databases, Simulation.
-          </p>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold">Analytics Strengths</h3>
-          <ul class="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
-            <li>Product analytics, KPI definition, and experimentation</li>
-            <li>ETL workflows and orchestration with Airflow</li>
-            <li>Data modeling, statistical analysis, and forecasting</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="text-lg font-semibold">Tools &amp; Platforms</h3>
-          <ul class="mt-3 space-y-2 text-sm text-slate-600 dark:text-slate-300">
-            <li>Python (pandas, NumPy, scikit-learn)</li>
-            <li>SQL, Power BI, Tableau, Excel</li>
-            <li>AWS, Docker, Airflow, ETL pipelines</li>
-          </ul>
-        </div>
+ <!-- About / Education -->
+<section id="about" class="max-w-6xl mx-auto px-4 py-12">
+  <div class="rounded-3xl border border-[var(--border)] p-8 bg-[var(--bg-elevated)] glass shadow-sm">
+    <h2 class="text-3xl md:text-4xl font-extrabold">Education &amp; Focus Areas</h2>
+
+    <div class="mt-4 grid md:grid-cols-3 gap-6 text-sm">
+
+      <!-- Education Column -->
+      <div>
+        <p class="flex items-center gap-2 text-xs uppercase tracking-wide text-[var(--muted)]">
+          <img src="University_of_Waterloo_seal.png"
+               alt="University of Waterloo Seal"
+               class="h-5 w-5 object-contain">
+          University of Waterloo · Waterloo, ON
+        </p>
+        <p class="mt-2 font-semibold">Bachelor of Mathematics (Honours)</p>
+        <p class="text-[var(--muted)] mt-1">Sep 2020 – Jul 2025</p>
+        <p class="mt-3 text-[var(--muted)]">
+          Relevant coursework: Statistical Learning, Forecasting, Visualization,
+          Linear Models, Databases &amp; SQL, Simulation.
+        </p>
       </div>
+
+      <!-- Analytics Strengths Column -->
+      <div>
+        <h3 class="text-lg font-semibold">Analytics Strengths</h3>
+        <ul class="mt-3 space-y-2 text-[var(--muted)]">
+          <li>Product and behavioral analytics, KPI definition, and experimentation.</li>
+          <li>Operational and manufacturing analytics for tooling, capacity, and reliability.</li>
+          <li>Fraud and risk monitoring for financial transactions.</li>
+        </ul>
+      </div>
+
+      <!-- Tools & Platforms Column -->
+      <div>
+        <h3 class="text-lg font-semibold">Tools &amp; Platforms</h3>
+        <ul class="mt-3 space-y-2 text-[var(--muted)]">
+          <li>Python (pandas, NumPy, scikit-learn)</li>
+          <li>SQL, Power BI, Tableau, Excel</li>
+          <li>AWS, Docker, Airflow, ETL pipelines</li>
+        </ul>
+      </div>
+
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Contact -->
   <section id="contact" class="max-w-6xl mx-auto px-4 py-12">
-    <div class="rounded-3xl border border-slate-200 dark:border-slate-800 p-8 bg-white/60 dark:bg-slate-900/60 glass shadow-sm">
+    <div class="rounded-3xl border border-[var(--border)] p-8 bg-[var(--bg-elevated)] glass shadow-sm">
       <h2 class="text-3xl md:text-4xl font-extrabold">Contact</h2>
-      <p class="mt-3 text-slate-600 dark:text-slate-300">Reach out for roles, collaborations, or questions about my work.</p>
-      <div class="mt-6 grid sm:grid-cols-2 gap-4 text-sm">
-        <a class="block p-4 rounded-2xl border hover:border-indigo-400" href="tel:+14373411881">📞 (437) 341-1881</a>
-        <a class="block p-4 rounded-2xl border hover:border-indigo-400" href="mailto:jianbo.zhao1007@gmail.com">📧 jianbo.zhao1007@gmail.com</a>
-        <a class="block p-4 rounded-2xl border hover:border-indigo-400" href="https://www.linkedin.com/in/j394zhao" target="_blank" rel="noopener">🔗 LinkedIn</a>
-        <a class="block p-4 rounded-2xl border hover:border-indigo-400" href="https://github.com/daveqwerty1007" target="_blank" rel="noopener">💻 GitHub</a>
-        <a class="block p-4 rounded-2xl border hover:border-indigo-400" href="resume.pdf" target="_blank" rel="noopener">📄 Resume (PDF)</a>
-        <a class="block p-4 rounded-2xl border hover:border-indigo-400" href="#home">🌐 Portfolio website</a>
+      <p class="mt-3 text-sm text-[var(--muted)]">
+        Reach out for product analytics, operations, manufacturing data, process optimization, or quality-focused roles.
+      </p>
+      <div class="mt-6 grid sm:grid-cols-3 gap-4 text-sm">
+        <a class="block p-4 rounded-2xl border border-[var(--border)] hover:border-[var(--accent)] transition"
+           href="tel:+14373411881">
+          📞 (437) 341-1881
+        </a>
+        <a class="block p-4 rounded-2xl border border-[var(--border)] hover:border-[var(--accent)] transition"
+           href="mailto:jianbo.zhao1007@gmail.com">
+          📧 jianbo.zhao1007@gmail.com
+        </a>
+        <a class="block p-4 rounded-2xl border border-[var(--border)] hover:border-[var(--accent)] transition"
+           href="resume.pdf" target="_blank" rel="noopener">
+          📄 Resume (PDF)
+        </a>
+        <a class="block p-4 rounded-2xl border border-[var(--border)] hover:border-[var(--accent)] transition"
+           href="https://www.linkedin.com/in/j394zhao" target="_blank" rel="noopener">
+          🔗 LinkedIn
+        </a>
+        <a class="block p-4 rounded-2xl border border-[var(--border)] hover:border-[var(--accent)] transition"
+           href="https://github.com/daveqwerty1007" target="_blank" rel="noopener">
+          💻 GitHub
+        </a>
+        <a class="block p-4 rounded-2xl border border-[var(--border)] hover:border-[var(--accent)] transition"
+           href="#home">
+          ⬆️ Back to top
+        </a>
       </div>
-      <p class="mt-6 text-xs text-slate-500">Note: Engagement summaries are anonymized; shared artifacts use synthetic or public datasets.</p>
+      <p class="mt-6 text-xs text-[var(--muted)]">
+        Note: Engagement summaries are anonymized; shared artifacts use synthetic or public datasets.
+      </p>
     </div>
   </section>
 
-  <footer class="py-10 text-center text-xs text-slate-500 dark:text-slate-400">
+  <footer class="py-8 text-center text-xs text-[var(--muted)]">
     <div class="max-w-6xl mx-auto px-4">
-      <p>© <span id="yr"></span> Jianbo Zhao. Built with HTML + Tailwind.</p>
+      <p>© <span id="yr"></span> Jianbo Zhao · Built in a Waterloo-inspired black &amp; gold theme.</p>
     </div>
   </footer>
-  <script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+  <script>
+    function toggleBlock(blockId, btnId) {
+      const block = document.getElementById(blockId);
+      const btn = document.getElementById(btnId);
+
+      if (block.classList.contains("line-clamp-3")) {
+        block.classList.remove("line-clamp-3");
+        btn.textContent = "Read less";
+      } else {
+        block.classList.add("line-clamp-3");
+        btn.textContent = "Read more";
+      }
+    }
+  </script>
 </body>
 </html>
